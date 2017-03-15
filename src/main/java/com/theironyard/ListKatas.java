@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.ArrayList;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -22,6 +24,13 @@ public class ListKatas {
      * @return An ArrayList of Integers, starting at 0 and continuing to n-1
      */
     // todo: create arrayListIndexes() method
+    public static ArrayList<Integer> arrayListIndexes(int n){
+        ArrayList<Integer> answer = new ArrayList<>();
+        for (int x = 0; x < n; x = x + 1){
+            answer.add(x);
+        }
+        return answer;
+    }
 
     /**
      * Write a static method named sumList() that accepts an ArrayList of
@@ -33,6 +42,13 @@ public class ListKatas {
      * @return the sum of the provided List of Doubles
      */
     // todo: create sumList() method
+    public static double sumList(ArrayList<Double> numbers){
+        double answer = 0;
+        for (int x = 0; x < numbers.size(); x = x + 1){
+            answer = answer + numbers.get(x);
+        }
+        return answer;
+    }
 
     /**
      * Create a static method named concatenateStrings() that accepts an
@@ -44,6 +60,13 @@ public class ListKatas {
      * @return a concatenation of the provided ArrayList of strings.
      */
     // todo: create concatenateStrings() method
+    public static String concatenateStrings(ArrayList<String> strings){
+        String answer = "";
+        for (int x = 0; x < strings.size(); x = x + 1){
+            answer = answer + strings.get(x);
+        }
+        return answer;
+    }
 
     /**
      * Create a static method named reverseListOfStrings() that accepts an
@@ -68,5 +91,12 @@ public class ListKatas {
      * @return an ArrayList of Strings in reverse order
      */
     // todo: create reverseListOfStrings() method
+    public static ArrayList<String> reverseListOfStrings(ArrayList<String> strings){
+        ArrayList<String> answer = new ArrayList<>();
+        for (int x = 0; x < strings.size(); x = x + 1){
+            answer.add(strings.get(strings.size()-(x+1)));
+        }
+        return answer;
+    }
 
 }
